@@ -1,7 +1,12 @@
 // import { Component } from "react";
+import { Monster } from "../../App";
 import "./card.styles.scss";
 
-const Card = ({ monster }) => {
+type Cards = {
+  monster: Monster;
+};
+
+const Card = ({ monster }: Cards) => {
   const { id, name, email } = monster;
   return (
     <div className="card-container">

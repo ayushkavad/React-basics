@@ -1,8 +1,13 @@
 // import { Component } from "react";
 import Card from "../card/card.component";
+import { Monster } from "../../App";
 import "./card-item.styles.scss";
 
-const CardItem = ({ monster }) => {
+type CardItems = {
+  monster: Monster[];
+};
+
+const CardItem = ({ monster }: CardItems) => {
   return (
     <div className="card-list">
       {monster.map((monster) => {
